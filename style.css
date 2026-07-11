@@ -1,0 +1,89 @@
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #021a0f;
+overflow: hidden;
+}
+
+.desktop {
+width: 100vw;
+height: 100vh;
+background: radial-gradient(circle, #033d26, #010d07);
+display: flex;
+gap: 30px;
+padding: 20px;
+}
+
+/* ICONS */
+.icon {
+width: 80px;
+text-align: center;
+color: #9fffcc;
+cursor: pointer;
+}
+
+.icon img {
+width: 50px;
+}
+
+.icon:hover {
+transform: scale(1.1);
+}
+
+/* WINDOW */
+.window {
+position: absolute;
+top: 120px;
+left: 120px;
+width: 300px;
+background: #022e1c;
+border: 2px solid #00ff99;
+display: none;
+padding: 10px;
+box-shadow: 0 0 15px #00ff99;
+}
+
+.window img {
+width: 100%;
+}
+
+.window span {
+color: #00ff99;
+cursor: pointer;
+float: right;
+}
+.album {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.album img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid #00ff99;
+}
+
+.album img:hover {
+  transform: scale(1.05);
+}
+.title-bar {
+  background: hsl(147, 58%, 56%);
+  color: black;
+  padding: 5px 10px;
+  align-items: center;
+  font-weight: bold;
+}
+
+.title-bar button {
+  background: red;
+  border: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.content {
+  padding: 10px;
+}

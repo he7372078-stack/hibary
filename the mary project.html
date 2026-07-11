@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Mary </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="desktop">
+
+```
+<!-- ICON 1 -->
+<div class="icon" onclick="openWindow('img1')">
+  <img src="qq.jpg">
+  <p>organic heresy</p>
+</div>
+
+<!-- ICON 2 -->
+<div class="icon" onclick="openWindow('img2')">
+  <img src="deadplare.jpg">
+  <p>dead plate</p>
+</div>
+
+<!-- ICON 3 -->
+<div class="icon" onclick="openWindow('img3')">
+  <img src="ace.jpg">
+  <p>ace attorny</p>
+</div>
+<div id="counter" style="color:hsl(120, 100%, 100%); font-size:40px; padding:10px;font-family:arialblack">
+  Loading...
+</div>
+<div class="icon" onclick="openWindow('folder1')">
+  <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png">
+  <p>2023</p>
+</div>
+
+<div class="icon" onclick="openWindow('folder2')">
+  <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png">
+  <p>2024</p>
+</div>
+
+<div class="icon" onclick="openWindow('folder3')">
+  <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png">
+  <p>2025</p>
+</div>
+```
+
+  </div>
+
+  <!-- WINDOWS -->
+
+  <div class="window" id="img1">
+    <div class="title-bar">
+    <span>hibary in organic heresy</span>
+    <span onclick="closeWindow('img1')">X</span>
+    <img src="c:\Users\d\Desktop\khaaa.png">
+  </div>
+ </div>
+  <div class="window" id="img2">
+    <div class="title-bar">
+    <span>hibary in dead plate</span>
+    <span onclick="closeWindow('img2')">X</span>
+    <img src="rah.jpg">
+  </div>
+  </div>
+
+  <div class="window" id="img3">
+    <span onclick="closeWindow('img3')">X</span>
+    <img src="c:\Users\d\Desktop\ace.jpg">
+  </div>
+
+  <div class="window" id="folder1">
+  <span onclick="closeWindow('folder1')">X</span>
+
+  <div class="album">
+    <img src="23.jpg">
+    <img src="2023.jpg">
+    </div>
+  </div>
+<div class="window" id="folder2">
+  <span onclick="closeWindow('folder2')">X</span>
+
+  <div class="album">
+    <img src="2024.jpg">
+    <img src="2024$.jpg">
+    <img src="photo_2026-07-11_14-54-36.jpg">
+    <img src="photo_2026-07-11_14-54-48.jpg">
+    <img src="hib.jpg"
+    </div>
+  </div>
+   </div>
+<div class="window" id="folder3">
+  <span onclick="closeWindow('folder3')">X</span>
+
+  <p style="color:#9fffcc;">Top secret 💚</p>
+</div>
+
+</div>
+
+<div class="window" id="folder3">
+  <span onclick="closeWindow('folder3')">X</span>
+
+  <p style="color:#9fffcc;">2025</p>
+</div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

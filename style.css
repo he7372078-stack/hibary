@@ -1,89 +1,116 @@
+/* 🧱 الأساس */
 body {
-margin: 0;
-font-family: Arial, sans-serif;
-background: #021a0f;
-overflow: hidden;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+
+  /* 🌿 الخلفية */
+  background: url("orange.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 
-.desktop {
-width: 100vw;
-height: 100vh;
-background: radial-gradient(circle, #033d26, #010d07);
-display: flex;
-gap: 30px;
-padding: 20px;
+/* 💚 طبقة تغميق خفيفة */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
 }
 
-/* ICONS */
+/* 🖥️ الأيقونات */
 .icon {
-width: 80px;
-text-align: center;
-color: #9fffcc;
-cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  margin: 15px;
+  cursor: pointer;
+  color: #00ff99;
 }
 
 .icon img {
-width: 50px;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 
-.icon:hover {
-transform: scale(1.1);
+.icon p {
+  margin: 5px 0 0;
+  font-size: 14px;
 }
 
-/* WINDOW */
+/* 🪟 النوافذ */
 .window {
-position: absolute;
-top: 120px;
-left: 120px;
-width: 300px;
-background: #022e1c;
-border: 2px solid #00ff99;
-display: none;
-padding: 10px;
-box-shadow: 0 0 15px #00ff99;
-}
-
-.window img {
-width: 100%;
-}
-
-.window span {
-color: #00ff99;
-cursor: pointer;
-float: right;
-}
-.album {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-.album img {
-  width: 100%;
-  height: 80px;
-  object-fit: cover;
-  cursor: pointer;
+  display: none;
+  position: absolute;
+  width: 320px;
+  background: #001a12;
   border: 2px solid #00ff99;
+  color: white;
+  box-shadow: 0 0 15px #00ff99;
 }
 
-.album img:hover {
-  transform: scale(1.05);
-}
+/* 📌 الشريط العلوي */
 .title-bar {
-  background: hsl(147, 58%, 56%);
+  background: #00ff99;
   color: black;
-  padding: 5px 10px;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   font-weight: bold;
 }
 
+/* ❌ زر الإغلاق */
 .title-bar button {
-  background: red;
-  border: bold;
-  color: white;
+  background: black;
+  color: #00ff99;
+  border: none;
   cursor: pointer;
+  padding: 3px 8px;
 }
 
+/* 📦 المحتوى */
 .content {
   padding: 10px;
+}
+
+/* 🖼️ الصور */
+.content img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* 📱 وضع الجوال FULLSCREEN */
+@media (max-width: 600px) {
+
+  body {
+    overflow: auto;
+  }
+
+  .window {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 999;
+    border: none;
+  }
+
+  .content {
+    height: calc(100% - 50px);
+    overflow-y: auto;
+  }
+
+  .icon img {
+    width: 50px;
+  }
+
+  .icon p {
+    font-size: 12px;
+  }
 }

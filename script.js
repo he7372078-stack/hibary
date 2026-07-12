@@ -54,3 +54,11 @@ function updateCounter() {
 // تحديث كل ثانية
 setInterval(updateCounter, 1000);
 updateCounter();
+function openWindow(id) {
+  const win = document.getElementById(id);
+  win.style.display = "block";
+}
+
+function closeWindow(id) {
+  document.getElementById(id).style.display = "none";
+}

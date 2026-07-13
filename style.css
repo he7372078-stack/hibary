@@ -133,3 +133,15 @@ body::before {
   }
 
 }
+@media (max-width: 600px) {
+
+  .icon img {
+    width: 90px;   /* كان 60 → كبرناه */
+    height: 90px;
+  }
+
+  .icon p {
+    font-size: 16px; /* تكبير النص */
+  }
+
+}

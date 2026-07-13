@@ -6,9 +6,14 @@ function closeWindow(id) {
 document.getElementById(id).style.display = "none";
 }
 function openWindow(id) {
+
+  // قفل كل النوافذ
+  const windows = document.querySelectorAll(".window");
+  windows.forEach(win => win.style.display = "none");
+
+  // افتح النافذة المطلوبة
   const win = document.getElementById(id);
   win.style.display = "block";
-  makeDraggable(win);
 }
 
 function closeWindow(id) {
